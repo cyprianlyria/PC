@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Portfolio Website - Cyprian Lyria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <style>
+        /* Custom styles */
+        .bgimage {
+            height: 100vh;
+            background-color: #ff00f2f0;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        #read_autobiography {
+            color: aliceblue;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #clickme:hover {
+            color: #4401fc;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Welcome to my website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Banner -->
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 hero-text">
+                    <div class="profile-photo">
+                        <img src="C:\Users\Cyprian Lyria\Downloads\Music\capstone\capstones\images\about.jpeg" alt="Profile Photo" style="width:150px; height:150px; border-radius:50%;">
+                    </div>
+                    <h2 class="hero_title">DEPARTMENT OF GENDER, YOUTH SPORT AND SOCIAL SERVICES</h2>
+                    <h3 class="hero_desc">PERFORMANCE CONTRACT</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">Core Mandate</h1>
+            <div class="row mt-4">
+                <div class="col-lg">
+                    <h4 style="color: rgb(25, 0, 255);">LIST of Work Done</h4>
+                    <div class="row mt-3">
+                        <div id="read_autobiography" class="col-lg-4" style="background-color: rgb(228, 191, 9);">
+                            <a href="#" target="_blank" style="color: aliceblue;">
+                                <h3 id="clickme">Response to Case of Disaster</h3>
+                            </a>
+                            <br>
+                            <a href="#">
+                                <h3>Pictorial Demonstrations</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h1 class="text-center">Videos</h1>
+            <div class="row">
+                <div class="col-lg-6 mt-4">
+                    <div class="card servicesText">
+                        <div class="card-body">
+                            <ul style="margin-top: 5%;">
+                                <li style="font-weight: bold;"><a style="outline: none;" href="C:\Users\Cyprian Lyria\Downloads\Music\project\project1\videos\DSC_3731.MOV">Watch Video</a></li>
+                            </ul>
+                            <br>
+                            <a href="C:\Users\Cyprian Lyria\Downloads\Music\project\project1\abstacts\REPORT ON THE GOVERNOR MWALIMU KAHIGA VOLLEYBALL CHAMPIONSHIPS HELD ON 31ST OCTOBER TO 3RD NOVEMBER 2024 AT KAMUKUNJI GROUNDS.docx">
+                                <h3>Report on Volleyball Match</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Programs and sensitization done</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="{{ url_for('static', filename='images/chat.png') }}" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Sensitization On fire</h4>
+                            <p class="card-text">Sensitization on fire rescue at Kiandu Secondary School</p>
+                            <div class="text-center">
+                                <a href="C:\Users\Cyprian Lyria\Downloads\Music\project\project1\abstacts\Othaya fire.docx" class="btn btn-success" target="_blank">View in details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="{{ url_for('static', filename='images/disease.jpeg') }}" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Youth empowerment</h4>
+                            <p class="card-text">Program on youth empowerment and employment held at Nyeri National polytechnic</p>
+                            <div class="text-center">
+                                <a href="C:\Users\Cyprian Lyria\Downloads\Music\project\project1\abstacts\report on 25 october At Nyeri poly.docx" class="btn btn-success" target="_blank">View in details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Contact us via</h1>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Nyeri&key=YOUR_GOOGLE_MAPS_API_KEY"></iframe>
+                </div>
+
+                <div class="col-lg-6">
+                    <p>Email: <strong>genderysss@gmail.com</strong></p>
+                    <p>Call: <strong>+254716857716</strong></p>
+                    <p>Call: <strong>+254745317744</strong></p>
+                    <h1 style="color: rgb(26, 231, 15)">Check All I Have Done Including the Abstracts</h1>
+                    <ul style="margin-top: 5%;">
+                        <li style="font-weight: bold;"><a style="outline: none;" href="https://github.com/cyprianlyria/project.git">My Github Projects</a></li>
+                        <li style="font-weight: bold;"><a style="outline: none;" href="https://drive.google.com/drive/folders/1uhEwwrbZIF5YpXV3YGm9B2k9ZiAxghkl?usp=sharing">Resume on Google Drive</a></li>
+                        <li style="font-weight: bold;"><a style="outline: none;" href="https://docs.google.com/document/d/1o8BzlykHwYBuEzMqEq2c5zv8EcA9g5T_/edit?usp=drive_link&ouid=110111210319835819724&rtpof=true&sd=true">Read My Autobiography</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center p-3">
+        <p class="text-light">@CyprianLyria 2024</p>
+    </footer>
+</body>
+</html>
